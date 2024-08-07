@@ -1,0 +1,424 @@
+<html>
+    
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+    <h1 id="title">SUDOKU</h1><br>
+      <div class="row">
+        <div class="col-md-6">
+        <form id="table">
+        <table>
+          <tr>
+            <td><input id="00"type="text" class = "square box1" data-col="0" data-row="0"></td>
+            <td><input id="10"type="text" class = "square box1" data-col="1" data-row="0"></td>
+            <td><input id="20"type="text" class = "square right-border box1" data-col="2" data-row="0"></td>
+            <td><input id="30"type="text" class = "square box2" data-col="3" data-row="0"></td>
+            <td><input id="40"type="text" class = "square box2" data-col="4" data-row="0"></td>
+            <td><input id="50"type="text" class = "square right-border box2" data-col="5" data-row="0"></td>
+            <td><input id="60"type="text" class = "square box3" data-col="6" data-row="0"></td>
+            <td><input id="70"type="text" class = "square box3" data-col="7" data-row="0"></td>
+            <td><input id="80"type="text" class = "square box3" data-col="8" data-row="0"></td>
+          </tr>
+          <tr>
+            <td><input id="01" type="text" class = "square box1" data-col="0" data-row="1"></td>
+            <td><input id="11" type="text" class = "square box1" data-col="1" data-row="1"></td>
+            <td><input id="21" type="text" class = "square right-border box1" data-col="2" data-row="1"></td>
+            <td><input id="31" type="text" class = "square box2" data-col="3" data-row="1"></td>
+            <td><input id="41" type="text" class = "square box2" data-col="4" data-row="1"></td>
+            <td><input id="51" type="text" class = "square right-border box2" data-col="5" data-row="1"></td>
+            <td><input id="61" type="text" class = "square box3" data-col="6" data-row="1"></td>
+            <td><input id="71" type="text" class = "square box3" data-col="7" data-row="1"></td>
+            <td><input id="81" type="text" class = "square box3" data-col="8" data-row="1"></td>
+          </tr>
+          <tr>
+            <td><input id="02" type="text" class = "square bottom-border box1" data-col="0" data-row="2"></td>
+            <td><input id="12" type="text" class = "square bottom-border box1" data-col="1" data-row="2"></td>
+            <td><input id="22" type="text" class = "square bottom-border right-border box1" data-col="2" data-row="2"></td>
+            <td><input id="32" type="text" class = "square bottom-border box2" data-col="3" data-row="2"></td>
+            <td><input id="42" type="text" class = "square bottom-border box2" data-col="4" data-row="2"></td>
+            <td><input id="52" type="text" class = "square bottom-border right-border box2" data-col="5" data-row="2"></td>
+            <td><input id="62" type="text" class = "square bottom-border box3" data-col="6" data-row="2"></td>
+            <td><input id="72" type="text" class = "square bottom-border box3" data-col="7" data-row="2"></td>
+            <td><input id="82" type="text" class = "square bottom-border box3" data-col="8" data-row="2"></td>
+          </tr>
+          <tr>
+            <td><input id="03" type="text" class = "square box4" data-col="0" data-row="3"></td>
+            <td><input id="13" type="text" class = "square box4" data-col="1" data-row="3"></td>
+            <td><input id="23" type="text" class = "square right-border box4" data-col="2" data-row="3"></td>
+            <td><input id="33" type="text" class = "square box5" data-col="3" data-row="3"></td>
+            <td><input id="43" type="text" class = "square box5" data-col="4" data-row="3"></td>
+            <td><input id="53" type="text" class = "square right-border box5" data-col="5" data-row="3"></td>
+            <td><input id="63" type="text" class = "square box6" data-col="6" data-row="3"></td>
+            <td><input id="73" type="text" class = "square box6" data-col="7" data-row="3"></td>
+            <td><input id="83" type="text" class = "square box6" data-col="8" data-row="3"></td>
+          </tr>
+          <tr>
+            <td><input id="04" type="text" class = "square box4" data-col="0" data-row="4"></td>
+            <td><input id="14" type="text" class = "square box4" data-col="1" data-row="4"></td>
+            <td><input id="24" type="text" class = "square right-border box4" data-col="2" data-row="4"></td>
+            <td><input id="34" type="text" class = "square box5" data-col="3" data-row="4"></td>
+            <td><input id="44" type="text" class = "square box5" data-col="4" data-row="4"></td>
+            <td><input id="54" type="text" class = "square right-border box5" data-col="5" data-row="4"></td>
+            <td><input id="64" type="text" class = "square box6" data-col="6" data-row="4"></td>
+            <td><input id="74" type="text" class = "square box6" data-col="7" data-row="4"></td>
+            <td><input id="84" type="text" class = "square box6" data-col="8" data-row="4"></td>
+          </tr>
+          <tr>
+            <td><input id="05" type="text" class = "square bottom-border box4" data-col="0" data-row="5"></td>
+            <td><input id="15" type="text" class = "square bottom-border box4" data-col="1" data-row="5"></td>
+            <td><input id="25" type="text" class = "square bottom-border right-border box4" data-col="2" data-row="5"></td>
+            <td><input id="35" type="text" class = "square bottom-border box5" data-col="3" data-row="5"></td>
+            <td><input id="45" type="text" class = "square bottom-border box5" data-col="4" data-row="5"></td>
+            <td><input id="55" type="text" class = "square bottom-border right-border box5" data-col="5" data-row="5"></td>
+            <td><input id="65" type="text" class = "square bottom-border box6" data-col="6" data-row="5"></td>
+            <td><input id="75" type="text" class = "square bottom-border box6" data-col="7" data-row="5"></td>
+            <td><input id="85" type="text" class = "square bottom-border box6" data-col="8" data-row="5"></td>
+          </tr>
+          <tr>
+            <td><input id="06" type="text" class = "square box7" data-col="0" data-row="6"></td>
+            <td><input id="16" type="text" class = "square box7" data-col="1" data-row="6"></td>
+            <td><input id="26" type="text" class = "square right-border box7" data-col="2" data-row="6"></td>
+            <td><input id="36" type="text" class = "square box8" data-col="3" data-row="6"></td>
+            <td><input id="46" type="text" class = "square box8" data-col="4" data-row="6"></td>
+            <td><input id="56" type="text" class = "square right-border box8" data-col="5" data-row="6"></td>
+            <td><input id="66" type="text" class = "square box9" data-col="6" data-row="6"></td>
+            <td><input id="76" type="text" class = "square box9" data-col="7" data-row="6"></td>
+            <td><input id="86" type="text" class = "square box9" data-col="8" data-row="6"></td>
+          </tr>
+          <tr>
+            <td><input id="07" type="text" class = "square box7" data-col="0" data-row="7"></td>
+            <td><input id="17" type="text" class = "square box7" data-col="1" data-row="7"></td>
+            <td><input id="27" type="text" class = "square right-border box7" data-col="2" data-row="7"></td>
+            <td><input id="37" type="text" class = "square box8" data-col="3" data-row="7"></td>
+            <td><input id="47" type="text" class = "square box8" data-col="4" data-row="7"></td>
+            <td><input id="57" type="text" class = "square right-border box8" data-col="5" data-row="7"></td>
+            <td><input id="67" type="text" class = "square box9" data-col="6" data-row="7"></td>
+            <td><input id="77" type="text" class = "square box9" data-col="7" data-row="7"></td>
+            <td><input id="87" type="text" class = "square box9" data-col="8" data-row="7"></td>
+          </tr>
+          <tr>
+            <td><input id="08" type="text" class = "square box7" data-col="0" data-row="8"></td>
+            <td><input id="18" type="text" class = "square box7" data-col="1" data-row="8"></td>
+            <td><input id="28" type="text" class = "square right-border box7" data-col="2" data-row="8"></td>
+            <td><input id="38" type="text" class = "square box8" data-col="3" data-row="8"></td>
+            <td><input id="48" type="text" class = "square box8" data-col="4" data-row="8"></td>
+            <td><input id="58" type="text" class = "square right-border box8" data-col="5" data-row="8"></td>
+            <td><input id="68" type="text" class = "square box9" data-col="6" data-row="8"></td>
+            <td><input id="78" type="text" class = "square box9" data-col="7" data-row="8"></td>
+            <td><input id="88" type="text" class = "square box9" data-col="8" data-row="8"></td>
+          </tr>
+
+          </table>
+        </form>
+        </table>
+      </form>
+
+      </div>
+        <div class="row">
+          <div class="col-md-6">
+        <div class="row">
+            <h2 id = "time"> :)</h2>
+      </div><br>
+      <div class="row">
+        <button type ="button" class = "btn-lg purplebox" id = "solution">Solution</button>
+      </div><br>
+        <div class="row">
+        <button type ="button" class = "btn btn-warning btn-lg" id = "restart">Restart</button>
+      </div><br>
+        <div class="row">
+        <button type ="button" class = "btn btn-info btn-lg" id = "showhint">Hint</button>
+      </div>
+    </div>
+  </div>
+      <div class="row">
+        <hr>
+        <button type ="button" class = "btn btn-success" id = "easy">Easy</button>
+        <button type ="button" class = "btn btn-success" id = "medium">Medium</button>
+        <button type ="button" class = "btn btn-success" id = "hard">Hard</button>
+      </div>
+    </div>
+
+      <h2> Rules of sudoku</h2>
+        <p> The classic Sudoku game involves a grid of 81 squares. The grid is divided into
+          nine blocks, each containing nine squares.
+        <p>The rules of the game are simple: each of the nine blocks has to contain all the numbers
+        1-9 within its squares. Each number can only appear once in a row, column or box.</p>
+        <p>The difficulty lies in that each vertical nine-square column, or horizontal
+        nine-square line across, within the larger square, must also contain the numbers
+        1-9, without repetition or omission.</p>
+        <p>Every puzzle has just one correct solution.</p>
+
+<script>
+// Bussiness logic.
+
+// Constractor of Map objects (to map the board).
+function Board() {
+  this.rows = [[0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0]];
+  this.columns = [[], [], [], [], [], [], [], [], []];
+  this.boxes = [[], [], [], [], [], [], [], [], []];
+  this.history = [];
+}
+
+// Function to check the value for the duplicates in a row, column and 3 by 3 box.
+Board.prototype.getSet = function(num, row, col) {
+  if (this.rows[row].includes(num) || this.columns[col].includes(num) || this.boxes[this.toBoxIndex(row, col)].includes(num)) {
+    return false;
+  } else {
+    return true;
+  }
+};
+
+Board.prototype.fillBoard = function(num, row, col) {
+  this.rows[row][col] = num;
+  this.columns[col].push(num);
+  this.boxes[this.toBoxIndex(row, col)].push(num);
+  this.history.push([num, row, col]);
+}
+
+Board.prototype.emptyCell = function(num, row, col) {
+  this.rows[row][col] = 0;
+  this.columns[col].pop(num);
+  this.boxes[this.toBoxIndex(row, col)].pop(num);
+  this.history.pop([num, row, col]);
+}
+
+
+Board.prototype.toBoxIndex = function(row, col) {
+  return Math.floor(row / 3) * 3 + Math.floor(col/3);
+}
+
+Board.prototype.validation = function(input){
+  if (!(/^\d+$/.test(input))){
+    return false;
+  } else if(parseInt(input) > 9 || parseInt(input) < 1) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+
+function generate(level, board, newBoard) {
+  console.log(board.history.length);
+  board.history = shuffle(board.history);
+  for (var i = 0; i < level; i++) {
+      newBoard.fillBoard(board.history[i][0], board.history[i][1], board.history[i][2]);
+      $("input#" + board.history[i][2] + board.history[i][1]).val(board.history[i][0]).prop('disabled', true).removeClass('presetHint').addClass('preset');
+  }
+}
+
+function showSolution(board, newBoard) {
+  console.log(board.history.length);
+  board.history = shuffle(board.history);
+  for (var i = 0; i < board.history.length; i++) {
+      newBoard.fillBoard(board.history[i][0], board.history[i][1], board.history[i][2]);
+      $("input#" + board.history[i][2] + board.history[i][1]).val(board.history[i][0]).prop('disabled', true).removeClass('presetHint');
+  }
+}
+
+function generateHint(board, newBoard) {
+  var set = 0;
+  var col = 0;
+  var row = 0;
+  while (set < 1) {
+    col = Math.floor(Math.random() * 9);
+    row = Math.floor(Math.random() * 9);
+    if(!$("input#" + col + row).hasClass('preset') && $("input#" + col + row).val() != board.rows[row][col] || newBoard.rows[row][col] == 0){
+      set++;
+      newBoard.fillBoard(board.rows[row][col], row, col);
+      $("input#" + col + row).val(board.rows[row][col]).prop('disabled', true).addClass('presetHint');
+    }
+  }
+}
+
+function restart(){
+  renew();
+  timer();
+}
+
+
+var reset;
+function timer() {
+var digit = 0;
+var decimal = 0;
+var minutes = 0;
+reset = setInterval(function(){
+ digit = digit + 1;
+ if (digit == 10){
+   digit = 0;
+   decimal = decimal + 1
+ }
+ if (decimal == 6){
+   decimal = 0;
+   minutes = minutes + 1;
+ }
+$("#time").text(minutes+":"+decimal+digit);}, 1000);
+};
+
+function refresh() {
+  for(var i = 0; i < 9; i++) {
+    for(var j = 0; j < 9; j++){
+      $("input#" + j + i).val("").prop( "disabled", false).removeClass('preset');
+    }
+  } clearInterval(reset);
+};
+
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+// Function is filling an empty board.
+function solver(depth, board) {
+  if (depth == 81) {
+    return true;
+  }
+  var col = depth % 9;
+  var row = Math.floor(depth / 9);
+  var arr = [1,2,3,4,5,6,7,8,9];
+  arr = shuffle(arr);
+  for (var i = 1; i < 9; i++) {
+    if (!board.getSet(arr[i], row, col)) {
+      continue;
+    }
+    board.fillBoard(arr[i], row, col);
+    //console.log(board);
+    if (solver((depth + 1), board)) {
+      return true;
+    }
+    board.emptyCell(arr[i], row, col);
+  }
+  return false;
+}
+
+function gameOver(board) {
+  if (board.history.length == 81) {
+    console.log("Hello");
+    clearInterval(reset);
+  }
+}
+
+
+// UI logic.
+
+$(document).ready(function(){
+  var board = new Board();
+  var newBoard = new Board();
+  solver(0, board);
+
+  //newBoard.history.forEach(function(arr){
+    //$("input#" + arr[2] + arr[1]).val(arr[0]).prop('disabled', true).removeClass('presetHint').addClass('preset');
+  //});
+
+
+
+
+  $("#easy").click(function(event){
+    event.preventDefault();
+    board = new Board();
+    newBoard = new Board();
+    refresh();
+    solver(0, board);
+
+    console.log(board.history.length);
+    generate(35, board, newBoard);
+    console.log(newBoard);
+    timer();
+
+  })
+  $("#medium").click(function(event){
+    event.preventDefault();
+    board = new Board();
+    newBoard = new Board();
+    refresh();
+    solver(0, board);
+    console.log(board);
+    console.log(board.history.length);
+    generate(31, board, newBoard);
+    console.log(newBoard);
+    timer();
+  })
+  $("#hard").click(function(event){
+    event.preventDefault();
+    board = new Board();
+    newBoard = new Board();
+    refresh();
+    solver(0, board);
+    console.log(board);
+    console.log(board.history.length);
+    generate(28, board, newBoard);
+    console.log(newBoard);
+    timer();
+  })
+
+  $("#restart").click(function(event) {
+    event.preventDefault();
+    board = new Board();
+    newBoard = new Board();
+    console.log(newBoard);
+    solver(0, board);
+    refresh();
+  });
+
+  $("#solution").click(function(event) {
+    event.preventDefault();
+    showSolution(board, newBoard);
+    console.log(newBoard);
+    clearInterval(reset);
+  });
+
+  $("table input").keyup(function(e) {
+    var $target = $(e.target);
+    var userInput = $target.val();
+
+    if(e.keyCode == 8) {
+      console.log("hello");
+      newBoard.emptyCell($target.val() , $target.data("row"), $target.data("col"));
+      console.log(newBoard);
+      return;
+    }
+
+    if (!board.validation(userInput)){
+       alert("Input is out of range");
+       $target.val("");
+       return;
+     };
+
+    userInput = parseInt(userInput);
+    console.log($target.data("col"));
+    console.log($target.data("row"));
+    console.log(userInput);
+    var check = newBoard.getSet(userInput, $target.data("row"), $target.data("col"));
+    console.log(check);
+    if (check) {
+      newBoard.fillBoard(userInput , $target.data("row"), $target.data("col"));
+      $("input#" + $target.data("col") + $target.data("row")).prop('disabled', false);
+    } else {
+      $target.val("");
+    }
+    console.log(newBoard);
+    gameOver(newBoard);
+  });
+
+
+
+  $("#showhint").click(function(event){
+    event.preventDefault();
+    generateHint(board, newBoard);
+    gameOver(newBoard);
+  });
+
+
+});
+</script>
+
+</body>
+
+</html>
