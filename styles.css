@@ -17,6 +17,18 @@
         background-color: white;
       }
 
+        .srh {
+            display: flex; 
+            justify-content: space-around;
+            margin: 1.4rem 10px; 
+        }
+
+.emh {
+            display: flex; 
+            justify-content: space-around;
+            margin: 1.4rem 10px; 
+        }
+
       button {
         background-color: #F4F5F0;
         color: black;
