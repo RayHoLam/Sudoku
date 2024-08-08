@@ -1,3 +1,40 @@
+ body {
+        margin: 0;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+      }
+
+      .sudoku {
+        padding: 10px 45px;
+        border-radius: 20px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 1),
+                    -4px -4px 10px rgba(255, 255, 255, 0.2);
+        background-color: white;
+      }
+
+      button {
+        background-color: #F4F5F0;
+        color: black;
+        border: none;
+        display: block;
+        width: 30%;
+        padding: 10px;
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+        margin: 20px auto;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        filter: brightness(0.9);
+      }
 
 .box1, .box3, .box5, .box7, .box9 {
     background-color: #ecf0f1; 
