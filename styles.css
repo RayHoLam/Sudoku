@@ -23,17 +23,23 @@
 }
 
         .srh {
-            display: flex; 
-            justify-content: space-around;
-            margin: 1.4rem 10px; 
- z-index: 0;
+         display: flex; 
+         margin: 1.4rem 10px; 
+         z-index: 0;
+         top: 50%;
+         left: 5%;
+         position: absolute;
+         transform: translate(-5%, -50%);
         }
 
 .emh {
  display: flex; 
- justify-content: space-around;
  margin: 1.4rem 10px; 
  z-index: 0;
+ top: 50%;
+ right: 5%;
+ position: absolute;
+ transform: translate(5%, -50%);
 }
 
       button {
