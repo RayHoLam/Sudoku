@@ -9,15 +9,19 @@
         font-family: Arial, sans-serif;
       }
 
-      .container {
-       min-width: 100px;
-       min-height:100px;
-        padding: 10px 45px;
-        border-radius: 20px;
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 1),
-                    -4px -4px 10px rgba(255, 255, 255, 0.2);
-        background-color: white;
-      }
+.container {
+ min-width: 200px;
+ min-height:200px;
+ top: 50%;
+ left: 50%;
+ position: absolute;
+ transform: translate(-50%, -50%);
+ padding: 10px 45px;
+ border-radius: 20px;
+ box-shadow: 4px 4px 10px rgba(0, 0, 0, 1),
+  -4px -4px 10px rgba(255, 255, 255, 0.2);
+ background-color: white;
+}
 
         .srh {
             display: flex; 
@@ -26,10 +30,10 @@
         }
 
 .emh {
-            display: flex; 
-            justify-content: space-around;
-            margin: 1.4rem 10px; 
-        }
+ display: flex; 
+ justify-content: space-around;
+ margin: 1.4rem 10px; 
+}
 
       button {
         background-color: #F4F5F0;
