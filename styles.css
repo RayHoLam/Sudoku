@@ -34,11 +34,10 @@
         color: black;
         border: none;
         display: block;
-        width: 30%;
+        width: 100%;
         padding: 10px;
         font-size: 20px;
         font-family: Arial, sans-serif;
-        margin: 20px auto;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         cursor: pointer;
@@ -60,6 +59,10 @@ table{
  justify-content: center;
  align-items: center;
  margin: 10px;
+ top: 50%;
+ left: 50%;
+ position: absolute;
+ transform: translate(-50%, -50%);
 }
 
 input.square {
@@ -81,7 +84,7 @@ input.square {
 
 h1 {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
