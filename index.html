@@ -161,16 +161,19 @@
           </div>
         
 <script>
-    const openAcross = document.getElementById('open-rules');
-    const closeAcross = document.getElementById('close-rules');
-    const modalAcross = document.getElementById('modal-rules');
+const openAcross = document.getElementById('open-rules');
+const closeAcross = document.getElementById('close-rules');
+const modalAcross = document.getElementById('modal-rules');
 
-    openAcross.addEventListener('click', () => {
-        modalAcross.classList.add('show-modal');
-        document.querySelector('#modal-rules input').focus();
-    });
-    closeAcross.addEventListener('click', () => modalrules.classList.remove('show-modal'));
+openAcross.addEventListener('click', () => {
+    modalAcross.classList.add('show-modal');
+    document.querySelector('#modal-rules input').focus();
+});
 
+// 修正变量名
+closeAcross.addEventListener('click', () => {
+    modalAcross.classList.remove('show-modal'); // 使用 modalAcross 而不是 modalrules
+});
 
     
 
