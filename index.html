@@ -4,120 +4,10 @@
     <link rel="stylesheet" href="styles.css" />
     <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <title>Sudoku</title>
-    <style>
-        .modal-container {
-            display: none; 
-            background-color: rgba(0, 0, 0, 0.6);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 0;
-        }
-        .show-modal {
-            display: block;
-            z-index: 0;
-        }
-        .cta-btn {
-            background-color: #F4F5F0;
-            color: black;
-            border: none;
-            display: block;
-            width: auto;
-            padding: 0.3rem;
-            font-family: Arial, sans-serif;
-            margin: 0.3rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            font-size: 20px;
-            z-index: 0;
-        }
-        
-        .modal {
-            background-color: lightblue;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            position: absolute;
-            overflow: hidden;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 100%;
-            width: 400px;
-            animation-name: modalopen;
-            animation-duration: var(--modal-duration);
-            z-index: 0;
-        }
-
-        .modal-header {
-            background: var(--primary-color);
-            color: #fff;
-            font-size: 30px;
-            font-weight: bold;
-            padding: 10px;
-            z-index: 0;
-        }
-
-        .modal-header h3 {
-            margin: 0;
-            z-index: 0;
-        }
-
-        .modal-content {
-            padding: 20px;
-            background-color: #F4F5F0;
-            font-size: 20px;
-            z-index: 0;
-        }
-        
-        .modal-form div {
-            margin: 15px 0;
-            z-index: 0;
-        }
-
-        .close-btn {
-            background: transparent;
-            background-color: lightblue;
-            font-size: 25px;
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: 0;
-        }
-
-        @keyframes modalopen {
-            from {
-                opacity: 0;
-            }
-            
-            to {
-                opacity: 1;
-            }
-        }
-        .button-container {
-            display: flex;
-            justify-content: space-between; 
-            margin-bottom: 0px;
-            z-index: 0;
-        }
-
-        #open-rules{
-            right: 30px;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
-    <h1 id="title">SUDOKU</h1><br>
-        
-        <div class="row">
-          <div class="col-md-6">
-        <div class="row">
-            <h2 id = "time"> :)</h2>
-      </div><br>
       <div class="button-container">
           <button class="cta-btn" id="open-rules">Rules</button>
       </div>
@@ -135,6 +25,12 @@
                   </div>
               </div>
           </div>
+        
+        <div class="row">
+          <div class="col-md-6">
+        <div class="row">
+            <h2 id = "time"> : </h2>
+      </div><br>
               
       <div class="row">
         <div class="col-md-6">
